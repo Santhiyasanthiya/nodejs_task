@@ -1,96 +1,4 @@
 
-// const express = require("express")
-// const cors = require("cors")
-// const app = express();
-// const mongodb = require("mongodb")
-// const mongoClient = mongodb.MongoClient
-
-// let users = [];
-
-// //middle ware
-// app.use(express.json())
-// app.use(cors({
-//     origin : "http://localhost:3001"
-// }))
-
-
-// app.get("/show", function (req, res) {
-
-//     let queryParams = req.query
-//     console.log(queryParams);
-
-//     let resUser = []
-
-//     for(let index = parseInt(req.query.offset); index < parseInt(req.query.offset) + parseInt(req.query.limit); index ++){
-//         if(users[index]){
-//             resUser. push(users[index])
-//         }
-//     }
-
-//     res.json(resUser);
-// });
-
-// app.post("/user", function (req, res) {
-//     req.body.id = users.length + 1;
-//     users.push(req.body)
-//     res.json({ message: "User Create Successfully"})
-// });
-
-// app.get("/user/:id", function (req, res){
-//    let takeId = req.params.id
-//    let getId = users.find((item) => item.id == takeId)
-
-//    if(getId) {
-//     res.json(getId)
-//    }else{
-//     res.json({message : " User not found"})
-//    }
-// })
-
-// app.put("/user/:id", function(req,res){
-//     let takeId = req.params.id ;
-//     let userIndex = users.findIndex((item) => item.id == takeId)
-
-//     if(userIndex != -1){
-//     Object.keys(req.body).forEach((item) => {
-//         users[userIndex][item] = req.body[item]
-//     });
-//     res.json({
-//         message: "Done"
-//     });
-// }else{
-//     res.json({
-//         message : "User not found"
-//     })
-// }
-// })
-// //----------------delete method
-
-// app.delete("/user/:id",function(req, res){
-//     let takeId = req.params.id ;
-//    let userIndex = users.findIndex((item) => item.id == takeId)
-
-//  if(userIndex != -1){
-//     users.splice(userIndex, 1)
-
-//     res.json({
-//      message : "User Deleted"
-//     })
-//  }else{
-//     res.json({
-//         message : "User not found",
-//     });
-// }
-
-// });
-
-
-// app.listen(process.env.PORT || 3000);
-
-//------------------------------16/09/2022
-
-
-// mongo db la eruinthu node js ku eppadi create pandrathu
 
 
 const express = require("express")
@@ -98,7 +6,7 @@ const cors = require("cors")
 const app = express();
 const mongodb = require("mongodb")
 const mongoClient = mongodb.MongoClient;
-const URL = "mongodb://localhost:27017";
+const URL = "mongodb+srv://santhiya:santhiya2525@cluster0.mejii.mongodb.net/?retryWrites=true&w=majority"
 const DB = "batch_37_wd_Tamil";
 
 let users = [];
